@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name        Amazon Tracking
 // @namespace   https://stijngoethals.tk/
-// @description Add links to  package trackers
+// @description Add links to package trackers
 // @include     https://www.amazon.*/gp/your-account/ship-track/*
-// @version     1.0.1
+// @version     1.0.2
 // @grant       none
 // @downloadURL https://raw.githubusercontent.com/icecoldfire/WebsiteScripts/master/Amazon/amazon-tracking.user.js
 // ==/UserScript==
