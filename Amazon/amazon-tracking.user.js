@@ -25,7 +25,7 @@
 	}else if(postnlPatt.test(text)){
 		patt = postnlPatt;
 		shippingCode = text.match(patt) [0];
-		URL = 'https://www.internationalparceltracking.com/Default.aspx#/search/' + shippingCode + '/' + countryCode + '/' + postalCode;
+		URL = 'https://www.internationalparceltracking.com/Main.aspx#/track/' + shippingCode + '/' + countryCode + '/' + postalCode;
 	}else{
 		return;
 	}
