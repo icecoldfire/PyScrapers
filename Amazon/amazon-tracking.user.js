@@ -5,11 +5,12 @@
 // @include     https://www.amazon.*/gp/your-account/ship-track/*
 // @version     1.0.1
 // @grant       none
+// @downloadURL https://raw.githubusercontent.com/icecoldfire/WebsiteScripts/master/Amazon/amazon-tracking.user.js
 // ==/UserScript==
 (function () {
 	'use strict';
-	var countryCode = ""
-	var postalCode = ""
+	var countryCode = "BE"
+	var postalCode = "2180"
 	var bPostPatt = new RegExp(/\d{24}/);
 	var postnlPatt = new RegExp(/[A-Z0-9]{15}/)
 	var element = window.document.getElementsByClassName('a-row a-spacing-top-mini a-size-small a-color-tertiary ship-track-grid-subtext') [0];
